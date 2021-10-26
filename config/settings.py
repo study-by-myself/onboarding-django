@@ -32,13 +32,20 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'board',
+    'sign',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 5
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -81,6 +88,9 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'sign.User'
+LOGIN_REDIRECT_URL = '/post'
+LOGOUT_REDIRECT_URL = '/post'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
