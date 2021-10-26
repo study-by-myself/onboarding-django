@@ -23,6 +23,7 @@
 - virtual env settings
     
     ```python
+    python3 -m venv venv
     # turn on
     . venv/bin/activate
     
