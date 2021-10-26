@@ -1,10 +1,5 @@
 # onboarding-django
 
-## Deployed demo page
-
-> NOT_YET . . .
-> 
-
 ## Implemented Requirements
 
 - [x]  post CRUD
