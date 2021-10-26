@@ -1,6 +1,19 @@
 # onboarding-django
 
+### wiki
+https://github.com/study-by-myself/onboarding-django/wiki
+
 ## Implemented Requirements
+> ViewSets으로 CRUD를 간단하게 구현했습니다.
+> 
+> DRF로 rest api를 만들었습니다.
+> 
+> settings.py에 rest framework에서 제공하는 pagination 설정을 추가하였습니다.
+> 
+> 회원 가입 시 검증과정이 필요하므로 validated_data를 추가하여 create을 overriding 했습니다.
+> 
+> rest framework에서 기본적으로 제공하는 login을 그대로 썼습니다.
+> 
 
 - [x]  post CRUD
 - [x]  sign-up | sign-in | sign-out
@@ -9,41 +22,36 @@
 
 ## How to run
 
-- clone repository
+
+### clone repository
     
-    ```python
     git clone https://github.com/study-by-myself/onboarding-django.git
-    ```
     
-- virtual env settings
+### virtual env settings
     
-    ```python
     python3 -m venv venv
+
     # turn on
     . venv/bin/activate
     
     # turn off
     deactivate
-    ```
     
-- pip install requirements
+### pip install requirements
     
-    ```python
     pip install -r requirements.txt
-    ```
+
     
-- db settings
+### db settings
     
-    ```python
     python manage.py makemigrations
     python manage.py migrate
-    ```
     
-- run server
     
-    ```python
+### run server
+    
     python manage.py runserver
-    ```
+    
     
 
 ## ERD
@@ -53,11 +61,21 @@
 
 > **Django The web framework for perfectionists with deadlines.**
 > 
+> 장고를 선택한 이유 : 마감까지 빠르고 쉽게 요구사항을 충족시킬 수 있어서
+> 
 - Django
 - Django-Rest-Framework
 - SQLite
 
 ## Directory Structure
+> 재사용성을  회원가입 / 로그인 / 로그아웃과 게시판 CRUD를 각각 다른 app으로 분리하였습니다.
+> 
+
+- config : project
+
+- board : post crud
+
+- sign : signup / sigin / signout
 
 ```python
 .
@@ -172,6 +190,7 @@
 ## 회원 `/user`
 
 ### 회원가입 `POST` `/signup`
+
 
 ```python
 # request
