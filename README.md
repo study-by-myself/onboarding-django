@@ -164,6 +164,16 @@
 {}
 ```
 
+### Pagination `GET` `/?limit=5&offset=0`
+
+기본적으로 5개로 설정되어 있습니다. limit과 offset을 자유롭게 바꿀 수 있습니다.
+
+```python
+# request
+
+{}
+```
+
 ## 회원 `/user`
 
 ### 회원가입 `POST` `/signup`
