@@ -1,6 +1,6 @@
 # onboarding-django
 
-### [wiki](https://github.com/study-by-myself/onboarding-django/wiki/%F0%9F%8F%A0-Home)
+### [wiki](https://github.com/study-by-myself/onboarding-django/wiki/%F0%9F%8F%A0-Home) 에서 좀 더 편하게 볼 수 있습니다.
 
 ## Implemented Requirements
 > ViewSets으로 CRUD를 간단하게 구현했습니다.
