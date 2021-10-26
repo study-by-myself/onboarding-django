@@ -1,9 +1,12 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from .views import PostViewSet
+from rest_framework.routers import DefaultRouter
 
-from rest_framework import routers
+router = DefaultRouter()
+# 첫 번째 인자는 url의 prefix
+# 두 번째 인자는 ViewSet
+router.register('post', PostViewSet)
 
-
-urlpatterns = [
-    path('', views.post_list, name='post_list'),
+urlpatterns =[
+    path('', include(router.urls))
 ]

@@ -1,9 +1,10 @@
-from .models import User, Post
+from .models import Post
 from rest_framework import serializers
 
 
-class UserSerializer(serializers.ModelSerializer):
+class PostSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.nickname')
 
     class Meta:
-        model = User
-        fields = '__all__'
+        model = Post
+        fields = ['id', 'title', 'created_at', 'user', 'content']

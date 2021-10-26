@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'board',
+    'sign',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -87,6 +88,9 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'sign.User'
+LOGIN_REDIRECT_URL = '/post'
+LOGOUT_REDIRECT_URL = '/post'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
